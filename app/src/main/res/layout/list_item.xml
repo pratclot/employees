@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.pratclot.employees.domain.DataItem" />
+
+        <variable
+            name="listener"
+            type="com.pratclot.employees.data.adapters.ClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="1dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E6DF9C"
+            android:onClick="@{() -> listener.onClick(item)}"
+            android:padding="4dp"
+            android:textColor="#0C0C0C"
+            app:setText="@{item}" />
+    </LinearLayout>
+</layout>
